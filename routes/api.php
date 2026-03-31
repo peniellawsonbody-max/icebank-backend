@@ -13,4 +13,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
+    
+    // NOUVELLES ROUTES CRYPTO ICI :
+    Route::get('/cryptos', [App\Http\Controllers\CryptoController::class, 'index']);
+    Route::get('/my-crypto-wallets', [App\Http\Controllers\CryptoController::class, 'myWallets']);
 });
