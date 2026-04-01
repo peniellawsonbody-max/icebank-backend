@@ -19,4 +19,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/my-crypto-wallets', [App\Http\Controllers\CryptoController::class, 'myWallets']);
     Route::post('/cryptos/buy', [App\Http\Controllers\CryptoController::class, 'buy']);
     Route::post('/cryptos/sell', [App\Http\Controllers\CryptoController::class, 'sell']);
+    // Route pour le Chatbot IA
+    Route::post('/chat', [App\Http\Controllers\AiController::class, 'chat']);
 });
